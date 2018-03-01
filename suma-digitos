@@ -1,0 +1,22 @@
+#include "stdafx.h"
+#include <iostream>
+#include <stdio.h>
+#include <conio.h>
+using namespace std;
+void main()
+{
+	  int d,c,s,N,i;
+    i=1;
+    s=0;
+    cout<<"ingrese el numero a operar : ";
+    cin>>N;
+    while(i<=N)
+	 {
+		  d=N%10;
+		  s=s+d;
+		  N=N/10;
+    }
+    cout<<"La suma de los dígitos es : "<<s<<endl;
+    getch();
+	
+}
