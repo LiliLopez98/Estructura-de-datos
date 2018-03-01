@@ -1,0 +1,46 @@
+#include "stdafx.h"
+#include <iostream>
+#include <stdio.h>
+#include <conio.h>
+using namespace std;
+void main()
+{
+	int d,N,i,v[50],TamVec,j,bandera;
+	bandera=0;
+	TamVec=0;
+	i=1;
+	cout<<"ingrese el número a operar : ";
+	cin>>N;
+	while(i<=N)
+	{
+		d=N%10;
+		v[TamVec]=d;
+		N=N/10;
+		TamVec=TamVec+1;
+	
+  }
+	j=TamVec;
+	for(i=0;i<(TamVec/2);i++)
+	{
+		if(v[i]==v[j-1])
+		{
+			j=j-1;
+		}
+		else
+		{
+			bandera=1;
+		}
+	}
+	if (bandera==0)
+	{
+    cout<<"Es capicua"<<endl;
+	}
+	else
+	{
+	  cout<<"No es capicua"<<endl;
+	}
+
+	getch();
+	
+}
+
