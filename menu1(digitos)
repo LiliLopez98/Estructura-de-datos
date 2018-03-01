@@ -1,0 +1,61 @@
+#include "stdafx.h"
+#include <iostream>
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+using namespace std;
+int suma_digitos(int N);
+int cantidad_pares(int N);
+void main()
+{
+	int op,s,c,N;
+	cout<<"ingrese el numero a operar: ";
+	cin>>N;
+	do
+  {
+		cout<<"------Menu-----"<<endl;
+		cout<<"1.-Suma de digitos"<<endl;
+		cout<<"2.-cantidad de pares"<<endl;
+		cout<<"0.-salir"<<endl;
+		cout<<"digite una opcion: "<<endl;
+		
+		cin>>op;
+		switch(op)
+		{
+		   case 1:s=suma_digitos(N);cout<<"la Suma de los digitos es: "<<s<<endl;break;
+	     case 2:c=cantidad_pares(N); cout<<"la cantidad de digitos pares son: "<<c<<endl;break;
+		   case 0:default:break;
+					
+		}
+	}while(op!=0);
+	getch();
+}
+
+int suma_digitos(int N)
+{
+	int d,s;
+	s=0;
+	while (N>=1)
+	{
+		d=N%10;
+		s=s+d;
+		N=N/10;
+
+	}
+   return s;
+}
+
+int cantidad_pares(int N)
+{
+	int c,d;
+	c=0;
+	while (N>=1)
+	{
+		d=N%10;
+		if(d%2==0)
+			c=c+1;
+		N=N/10;
+
+	}
+   return c;
+}
