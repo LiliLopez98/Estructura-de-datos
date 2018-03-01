@@ -1,0 +1,20 @@
+#include <iostream>
+#include <stdio.h>
+#include <conio.h>
+using namespace std;
+void main()
+{
+	int d,s,N,i,I;
+	i=1;
+	I=0;
+	cout<<"ingrese el numero a operar : ";
+	cin>>N;
+	while(i<=N)
+	{
+		d=N%10;
+		I=I*10+d;
+		N=N/10;
+  }
+	cout<<"El numero invertido es: "<<I;
+	getch();
+}
