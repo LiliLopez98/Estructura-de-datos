@@ -1,0 +1,24 @@
+#include "stdafx.h"
+#include <iostream>
+#include <stdio.h>
+#include <conio.h>
+using namespace std;
+void main()
+{
+	int d,N,i,c;
+	i=1;
+	c=0;
+	cout<<"ingrese el numero a operar : ";
+	cin>>N;
+	while(i<=N)
+	{
+		d=N%10;
+		if(d%2==0)
+		
+			c=c+1;
+		
+		N=N/10;
+  }
+	cout<<"La cantidad de digitos pares es: "<<c;
+	getch();
+}
