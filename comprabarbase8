@@ -1,0 +1,24 @@
+#include "stdafx.h"
+#include <iostream>
+#include <stdio.h>
+#include <conio.h>
+using namespace std;
+void main()
+{
+	int d,N,i,c;
+	i=1;
+	c=0;
+	cout<<"ingrese el numero a operar : ";
+	cin>>N;
+	while(i<=N)
+	{
+		d=N%10;
+		if(d>7)
+		
+			cout<<"El digito: "<<d<<" no pertenece a la base 8"<<endl;
+		
+		N=N/10;
+  }
+	getch();
+}
+
