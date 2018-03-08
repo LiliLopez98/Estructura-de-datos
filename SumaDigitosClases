@@ -1,0 +1,55 @@
+Sumadigito.h
+#pragma once
+class SumaDigito
+{
+  private:
+   int N;
+  public:
+	 SumaDigito(void);
+	 ~SumaDigito(void);
+	 int calcular_sumadigito(int N);
+};
+
+SumaDigito.cpp
+#include "StdAfx.h"
+#include "SumaDigito.h"
+
+SumaDigito::SumaDigito(void)
+{
+}
+
+
+SumaDigito::~SumaDigito(void)
+{
+}
+int SumaDigito::calcular_sumadigito(int N)
+{
+	int s,d;
+	s=0;
+	while(N>0)
+	{
+		d=N%10;
+		s=s+d;
+		N=N/10;
+	}
+	return s;
+}
+
+ejemplo2.cpp
+Principal.cpp
+#include "stdafx.h"
+#include <conio.h>
+#include <iostream>
+#include "stdio.h"
+#include "SumaDigito.h"
+using namespace std;
+
+void main()
+{ SumaDigito sumadigito1;
+	int N;
+	cout<<"Ingrese el numero a operar: ";
+	cin>>N;
+	cout<<"La suma de los digitos es: "<< sumadigito1.calcular_sumadigito(N);
+	getch();
+}
+
