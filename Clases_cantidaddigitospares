@@ -1,0 +1,54 @@
+digitospares.h
+#pragma once
+class digitospares
+{
+  private:
+	int numeroaoperar;
+  public:
+	digitospares(void);
+	~digitospares(void);
+	int Calcular_cantidadpares(int N);
+};
+
+digitospares.cpp
+#include "StdAfx.h"
+#include "digitospares.h"
+
+digitospares::digitospares(void)
+{
+}
+
+digitospares::~digitospares(void)
+{
+}
+int digitospares::Calcular_cantidadpares(int N)
+{
+	int d,c;
+	c=0;
+	while(N>0)
+	{
+		d=N%10;
+		if(d%2==0)
+			c=c+1;
+		N=N/10;
+	}
+	return c;
+
+}
+ejemplodigitospares.cpp
+#include "stdafx.h"
+#include <conio.h>
+#include <iostream>
+#include "stdio.h"
+#include "digitospares.h"
+using namespace std;
+
+void main()
+{ digitospares contador1;
+	int N;
+	cout<<"Ingrese el numero a operar: ";
+	cin>>N;
+	cout<<"La cantidad de digitos pares es: "<< contador1.Calcular_cantidadpares(N);
+	getch();
+}
+
